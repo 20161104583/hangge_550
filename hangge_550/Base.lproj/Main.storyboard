@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hangge_550" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://www.hangge.com" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iRM-mu-34I">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jF1-T1-UTz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="heD-2Y-TMu">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdC-rd-X0N">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="D1y-fC-IAM"/>
+                                    <constraint firstAttribute="height" constant="30" id="l1D-kJ-sKT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BVL-Pz-spy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="heD-2Y-TMu" firstAttribute="top" secondItem="DdC-rd-X0N" secondAttribute="bottom" constant="8" id="GPm-al-10K"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="heD-2Y-TMu" secondAttribute="bottom" id="K3R-mD-2xW"/>
+                            <constraint firstItem="DdC-rd-X0N" firstAttribute="leading" secondItem="iRM-mu-34I" secondAttribute="trailing" constant="8" id="OKe-SV-Eif"/>
+                            <constraint firstItem="DdC-rd-X0N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="RAg-sh-J4P"/>
+                            <constraint firstItem="DdC-rd-X0N" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Rss-mo-caA"/>
+                            <constraint firstItem="heD-2Y-TMu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zeh-IE-zJy"/>
+                            <constraint firstItem="iRM-mu-34I" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="qwG-sl-55g"/>
+                            <constraint firstItem="iRM-mu-34I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uME-6H-GFt"/>
+                            <constraint firstAttribute="trailing" secondItem="heD-2Y-TMu" secondAttribute="trailing" id="wCt-pc-tJJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btngo" destination="DdC-rd-X0N" id="fZ1-dG-uQe"/>
+                        <outlet property="txturl" destination="iRM-mu-34I" id="jiE-gl-1P0"/>
+                        <outlet property="webview" destination="heD-2Y-TMu" id="iPH-AA-pI0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="34.632683658170919"/>
+        </scene>
+    </scenes>
+</document>
